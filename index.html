@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorite Song</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#e8f4ff;
+    text-align:center;
+}
+header{
+    background:#1f4e79;
+    color:white;
+    padding:20px;
+}
+section{padding:30px;}
+iframe{
+    max-width:100%;
+    border:none;
+}
+#box{
+    width:100px;
+    height:100px;
+    background:#ff4d4d;
+    position:relative;
+    margin:30px auto;
+}
+button{
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+}
+footer{
+    background:#1f4e79;
+    color:white;
+    padding:15px;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>My Favorite Music Website</h1>
+<p>Created by marawan</p>
+</header>
+
+<section>
+<h2>Favorite Song</h2>
+<p>Perfect - Ed Sheeran</p>
+
+<iframe width="700" height="394"
+src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<h2>JavaScript Animation</h2>
+
+<div id="box"></div>
+
+<button onclick="animateBox()">Start Animation</button>
+</section>
+
+<footer>
+<p>&copy; 2026 marawan</p>
+</footer>
+
+<script>
+function animateBox(){
+    const box=document.getElementById("box");
+    let pos=0;
+    box.style.left="0px";
+    const id=setInterval(frame,5);
+    function frame(){
+        if(pos>=300){
+            clearInterval(id);
+        }else{
+            pos++;
+            box.style.left=pos+"px";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
